@@ -1,5 +1,13 @@
 def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
-    
+
+    """
+    : matrizCasosTest: Rescibe una matriz vacía.
+    : rutaAccesoFichero: Indica la ruta del fichero que se va a leer.
+    : return: Devuelve una lista vacía con un mensaje advertiendo del problema.
+    Si todo es correcto la función devuelve una matriz con los objetos que hay en los casos test, en este caso los objetos de la tienda, separados por coma.
+
+    """
+
     try:
         if not isinstance(rutaAccesoFichero, str):
             raise ValueError
