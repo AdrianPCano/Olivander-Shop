@@ -22,6 +22,12 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
                 numeroPropiedadesItem = len(linea.split(','))
             else:
                 item = linea.rstrip().rsplit(',', maxsplit=numeroPropiedadesItem - 1)
+                for atributo in item:
+                    try:
+                     atributo=int(atributo)
+                    except:
+                        pass
+                    print(type(atributo))
                 casosTestDia.append(item)
         fichero.close()
         return matrizCasosTest
@@ -55,7 +61,7 @@ if __name__ == "__main__":
 
     rutaAccesoFichero = "C:\Users\adrian\Desktop\Olivander-Shop/casos_test.txt"
 
-    # rutaAccesoFichero = "stdout_bug_conjured.g"
+    # rutaAccesoFichero = "stdout_bug_conjured.gr"
 
     matrizCasosTest = []
 
