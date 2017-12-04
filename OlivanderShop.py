@@ -30,7 +30,7 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
                     except:
                         pass
                     #print(type(atributo))
-                    print atributo
+                    print (atributo)
                 casosTestDia.append(item)
         fichero.close()
         return matrizCasosTest
