@@ -26,6 +26,7 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
                 casosTestDia = []
             elif linea == "\n":
                 matrizCasosTest.append(casosTestDia)
+                print(matrizCasosTest)
             elif linea.find("name") != -1:
                 numeroPropiedadesItem = len(linea.split(','))
             else:
@@ -38,6 +39,7 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
                     except:
                         pass
                     #print(type(atributo))
+                    print (atributo)
                 casosTestDia.append(item)
         fichero.close()
         return matrizCasosTest
@@ -58,7 +60,9 @@ def crearFicheroCasosTest(ficheroVolcadoCasosTest, matrizCasosTest):
             print("La ruta de acceso al fichero ha de ser un string")
     else:
         for (offset, casosTestDia) in enumerate(matrizCasosTest):
+
             print('-' * 5 + " Dia %d: " % offset + '-' * 5 )
+        
             for item in casosTestDia:
                 stdout.write(','.join(item) + '\n')
         stdout.close()
