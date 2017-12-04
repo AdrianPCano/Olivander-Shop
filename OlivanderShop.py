@@ -18,6 +18,7 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
                 casosTestDia = []
             elif linea == "\n":
                 matrizCasosTest.append(casosTestDia)
+                print(matrizCasosTest)
             elif linea.find("name") != -1:
                 numeroPropiedadesItem = len(linea.split(','))
             else:
