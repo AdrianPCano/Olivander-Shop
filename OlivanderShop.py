@@ -53,8 +53,9 @@ def mostrarCasosTest(matrizCasosTest):
 
 if __name__ == "__main__":
 
-    rutaAccesoFichero = "./stdout.gr"
-    # rutaAccesoFichero = "stdout_bug_conjured.gr"
+    rutaAccesoFichero = "C:\Users\adrian\Desktop\Olivander-Shop/casos_test.txt"
+
+    # rutaAccesoFichero = "stdout_bug_conjured.g"
 
     matrizCasosTest = []
 
