@@ -31,6 +31,13 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
             else:
                 #No cumple con lo que nos piden, se tiene que refactorizar.
                 item = linea.rstrip().rsplit(',', maxsplit=numeroPropiedadesItem - 1)
+
+                for atributo in item:
+                    try:
+                     atributo = int(atributo)
+                    except:
+                        pass
+                    #print(type(atributo))
                 casosTestDia.append(item)
         fichero.close()
         return matrizCasosTest
@@ -73,7 +80,8 @@ def mostrarCasosTest(matrizCasosTest):
 
 if __name__ == "__main__":
 
-    rutaAccesoFichero = "./stdout.gr"
+    rutaAccesoFichero = r"C:\\Users\\adrian\\Desktop\\Olivander-Shop\\casos_test.txt"
+ 
     # rutaAccesoFichero = "stdout_bug_conjured.gr"
 
     matrizCasosTest = []
@@ -82,6 +90,6 @@ if __name__ == "__main__":
 
     mostrarCasosTest(matrizCasosTest)
 
-    ficheroVolcadoCasosTest = "./stdout.txt"
+    ficheroVolcadoCasosTest = "stdout.txt"
 
     crearFicheroCasosTest(ficheroVolcadoCasosTest, matrizCasosTest)
