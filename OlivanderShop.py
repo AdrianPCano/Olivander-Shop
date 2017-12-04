@@ -29,7 +29,9 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
             elif linea.find("name") != -1:
                 numeroPropiedadesItem = len(linea.split(','))
             else:
+
                 #No cumple con lo que nos piden, se tiene que refactorizar.
+                
                 item = linea.rstrip().rsplit(',', maxsplit=numeroPropiedadesItem - 1)
                 casosTestDia.append(item)
         fichero.close()
@@ -74,7 +76,7 @@ def mostrarCasosTest(matrizCasosTest):
 if __name__ == "__main__":
 
     rutaAccesoFichero = "./stdout.gr"
-    # rutaAccesoFichero = "stdout_bug_conjured.gr"
+    # rutaAccesoFichero = "stdout_bug_conjured.g"
 
     matrizCasosTest = []
 
