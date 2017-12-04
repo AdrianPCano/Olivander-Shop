@@ -41,7 +41,7 @@ def crearFicheroCasosTest(ficheroVolcadoCasosTest, matrizCasosTest):
     """
     : ficheroVolcadoCasosTest: Se crea un fichero con la información de los objetos de la tienda.
     : matrizCasosTest: Es una matriz que contiene los datos del fichero que forman los casos test.
-
+    : return: En este caso no devuelve nada, crea un fichero .gr con los objetos de la tienda transformados.
     """
     try:
         if not isinstance(ficheroVolcadoCasosTest, str):
@@ -62,6 +62,9 @@ def mostrarCasosTest(matrizCasosTest):
     """
     : matrizCasosTest: Matriz con los elementos de la tienda separados por ','.
     : return: En este caso no devuelve nada, imprime por pantalla los objetos de la tienda en forma de lista.
+
+    ""
+
     for (offset, casosTestDia) in enumerate(matrizCasosTest):
         print('-' * 5 + " Dia %d: " % offset + '-' * 5)
         for item in casosTestDia:
