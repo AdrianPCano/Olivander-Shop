@@ -1,0 +1,51 @@
+
+-------------
+grupos de 3?
+
+Para la refactorización, en parejas.
+-------------
+
+Imagina que te dan este código en la empresa y te piden que lo refactorices.
+No hay documentación, así que has de crearla tú.
+En la capa de lógica dicen que tienen un problema: han de hacer transformaciones a int
+de string y dicen que eso es responsabilidad de la capa de acceso a datos.
+
+-------------
+
+
+0. Mostrar la figura de arquitectura en 3 capas: trabajaremos en acceso a datos,
+   preparando los casos test para su consumo en la capa de lógica /negocio.
+
+1. Crea el repo en remoto y clona a local. Commit de los ficheros iniciales en Slack. 
+   Crea una rama para tus pruebas.
+
+1. Estudia y explica el comportamiento del código del módulo accesoCasosTexttest.py
+
+2. Crea la documentación de cada módulo y función mediante docstring. Lee la especificación
+   en: 
+   https://www.python.org/dev/peps/pep-0257/#specification 
+   Ojo al formato de tus comentarios:
+   https://www.python.org/dev/peps/pep-0008/#comments
+
+2. Concluye: ¿qué problemas presenta el código? 
+    ¿?
+
+3. ¿Qué problemas presentan los casos test así formateados?
+
+4. Refactoriza el código para sanear la deuda técnica:
+ 	
+	=> explicar qué es la deuda técnica
+
+	En MEMORIA
+	['Backstage passes to a TAFKAL80ETC concert', =>' -25', =>' 0']
+	espacio en blanco más un elemento que no es integer. En el fichero ok, pero 
+	en la capa de lógica habrá que incluir código para transformarlo, y eso
+	parece más una responsabilidad del código de acceso a datos. 
+
+5. Crea una rama hasta que todo funcione OK.
+
+6. La refactorización conduce a dos nuevas funciones, dos nuevas responsabilidades:
+ 	1. Transformar los string del fichero (fuente de datos) a integer para la capa de lógica.
+ 	2. Transformar los integer de memoria a string para volcarlos al fichero txt.
+
+7. MERGE de la rama con el master.
