@@ -1,5 +1,5 @@
 def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
-
+    
     try:
         if not isinstance(rutaAccesoFichero, str):
             raise ValueError
