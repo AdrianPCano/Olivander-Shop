@@ -29,6 +29,7 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
             elif linea.find("name") != -1:
                 numeroPropiedadesItem = len(linea.split(','))
             else:
+                #No cumple con lo que nos piden, se tiene que refactorizar.
                 item = linea.rstrip().rsplit(',', maxsplit=numeroPropiedadesItem - 1)
                 casosTestDia.append(item)
         fichero.close()
@@ -37,6 +38,11 @@ def accesoCasosTexttest(matrizCasosTest, rutaAccesoFichero):
 
 def crearFicheroCasosTest(ficheroVolcadoCasosTest, matrizCasosTest):
 
+    """
+    : ficheroVolcadoCasosTest: Se crea un fichero con la información de los objetos de la tienda.
+    : matrizCasosTest: Es una matriz que contiene los datos del fichero que forman los casos test.
+
+    """
     try:
         if not isinstance(ficheroVolcadoCasosTest, str):
             raise ValueError
