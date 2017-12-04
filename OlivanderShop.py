@@ -59,6 +59,9 @@ def crearFicheroCasosTest(ficheroVolcadoCasosTest, matrizCasosTest):
 
 def mostrarCasosTest(matrizCasosTest):
 
+    """
+    : matrizCasosTest: Matriz con los elementos de la tienda separados por ','.
+    : return: En este caso no devuelve nada, imprime por pantalla los objetos de la tienda en forma de lista.
     for (offset, casosTestDia) in enumerate(matrizCasosTest):
         print('-' * 5 + " Dia %d: " % offset + '-' * 5)
         for item in casosTestDia:
