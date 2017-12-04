@@ -58,7 +58,7 @@ def crearFicheroCasosTest(ficheroVolcadoCasosTest, matrizCasosTest):
             print("La ruta de acceso al fichero ha de ser un string")
     else:
         for (offset, casosTestDia) in enumerate(matrizCasosTest):
-            stdout.write('-' * 5 + " Dia %d: " % offset + '-' * 5 + '\n')
+            print('-' * 5 + " Dia %d: " % offset + '-' * 5 )
             for item in casosTestDia:
                 stdout.write(','.join(item) + '\n')
         stdout.close()
@@ -83,6 +83,7 @@ if __name__ == "__main__":
     rutaAccesoFichero = r"C:\\Users\\adrian\\Desktop\\Olivander-Shop\\casos_test.txt"
  
     # rutaAccesoFichero = "stdout_bug_conjured.gr"
+    # rutaAccesoFichero = "/.stdout.gr"
 
     matrizCasosTest = []
 
